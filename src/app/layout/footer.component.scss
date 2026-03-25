@@ -1,0 +1,120 @@
+.site-footer {
+  background: #0d1f3c;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 3rem 2rem 1.5rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.footer-brand {
+  .logo {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+
+  .logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #c4a052;
+  }
+
+  .logo-sub {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+  }
+}
+
+.footer-contact {
+  h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: #c4a052;
+    margin: 0 0 1rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin: 0 0 0.75rem;
+    line-height: 1.6;
+
+    a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+
+      &:hover {
+        color: #c4a052;
+      }
+    }
+  }
+}
+
+.footer-links {
+  h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: #c4a052;
+    margin: 0 0 1rem;
+    font-weight: 600;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    @media (max-width: 768px) {
+      align-items: center;
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #c4a052;
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+
+  p {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+  }
+}

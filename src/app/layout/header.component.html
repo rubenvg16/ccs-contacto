@@ -1,0 +1,28 @@
+<header class="site-header">
+  <div class="header-container">
+    <a routerLink="/" class="logo">
+      <span class="logo-text">CCS</span>
+      <span class="logo-sub">y Asociados</span>
+    </a>
+    
+    <nav class="main-nav">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">Inicio</a>
+      <a routerLink="/servicios" routerLinkActive="active" class="nav-link">Servicios</a>
+      <a routerLink="/contacto" routerLinkActive="active" class="nav-link">Contacto</a>
+    </nav>
+
+    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Menú">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" [class.open]="menuOpen">
+    <nav class="mobile-nav">
+      <a routerLink="/" (click)="closeMenu()" class="nav-link">Inicio</a>
+      <a routerLink="/servicios" (click)="closeMenu()" class="nav-link">Servicios</a>
+      <a routerLink="/contacto" (click)="closeMenu()" class="nav-link">Contacto</a>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nueva consulta - CCS y Asociados</title>
+  <style>
+    /* Reset */
+    table { border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { border: 0; display: block; max-width: 100%; height: auto; }
+    a { color: #2c5282; text-decoration: none; }
+    
+    /* Media queries */
+    @media screen and (max-width: 600px) {
+      .container { width: 100% !important; }
+      .mobile-padding { padding-left: 20px !important; padding-right: 20px !important; }
+      .mobile-stack { display: block !important; width: 100% !important; }
+      .mobile-text-center { text-align: center !important; }
+      .mobile-space { height: 20px !important; }
+    }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif; background-color: #f8f9fa; color: #2d3748; line-height: 1.6;">
+  
+  <!-- Header -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #1a365d;">
+    <tr>
+      <td align="center" style="padding: 25px 20px;">
+        <h1 style="margin: 0; color: #ffffff; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 600; letter-spacing: 1px;">
+          CCS y Asociados
+        </h1>
+        <p style="margin: 5px 0 0 0; color: #c4a052; font-size: 11px; text-transform: uppercase; letter-spacing: 2px;">
+          Abogados & Asesores Legales
+        </p>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Main Content -->
+  <table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="center" style="padding: 30px 15px;">
+        
+        <!-- Card Container -->
+        <table class="container" width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 12px 24px rgba(0, 0, 0, 0.08);">
+          
+          <!-- Title -->
+          <tr>
+            <td class="mobile-padding" style="padding: 25px 25px 15px 25px; border-bottom: 1px solid #e2e8f0;">
+              <h2 style="margin: 0; color: #1a365d; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 600;">
+                Nueva consulta recibida
+              </h2>
+              <p style="margin: 8px 0 0 0; color: #4a5568; font-size: 13px;">
+                Has recibido un nuevo mensaje desde la web
+              </p>
+            </td>
+          </tr>
+
+          <!-- Content -->
+          <tr>
+            <td class="mobile-padding" style="padding: 25px;">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                
+                <!-- Nombre -->
+                <tr>
+                  <td style="padding-bottom: 18px;">
+                    <p style="margin: 0 0 4px 0; color: #4a5568; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">
+                      Nombre
+                    </p>
+                    <p style="margin: 0; color: #1a365d; font-size: 16px; font-weight: 500;">
+                      {{from_name}}
+                    </p>
+                  </td>
+                </tr>
+
+                <!-- Email -->
+                <tr>
+                  <td style="padding-bottom: 18px;">
+                    <p style="margin: 0 0 4px 0; color: #4a5568; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">
+                      Correo electrónico
+                    </p>
+                    <p style="margin: 0; color: #2c5282; font-size: 15px;">
+                      <a href="mailto:{{from_email}}" style="color: #2c5282; text-decoration: none;">{{from_email}}</a>
+                    </p>
+                  </td>
+                </tr>
+
+                <!-- Teléfono -->
+                <tr>
+                  <td style="padding-bottom: 18px;">
+                    <p style="margin: 0 0 4px 0; color: #4a5568; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">
+                      Teléfono
+                    </p>
+                    <p style="margin: 0; color: #1a365d; font-size: 15px;">
+                      {{phone}}
+                    </p>
+                  </td>
+                </tr>
+
+                <!-- Mensaje -->
+                <tr>
+                  <td>
+                    <p style="margin: 0 0 8px 0; color: #4a5568; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">
+                      Mensaje
+                    </p>
+                    <div style="background-color: #f8f9fa; padding: 18px; border-radius: 6px; border-left: 3px solid #c4a052;">
+                      <p style="margin: 0; color: #2d3748; font-size: 14px; white-space: pre-wrap; line-height: 1.5;">{{message}}</p>
+                    </div>
+                  </td>
+                </tr>
+
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td class="mobile-padding" style="padding: 20px 25px; background-color: #f0f2f5; border-radius: 0 0 8px 8px;">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="mobile-text-center" style="vertical-align: top;">
+                    <p style="margin: 0 0 4px 0; color: #1a365d; font-weight: 600; font-size: 13px;">
+                      CCS y Asociados
+                    </p>
+                    <p style="margin: 0; color: #4a5568; font-size: 12px; line-height: 1.4;">
+                      Avda. Ramón y Cajal 2, 3ºC<br>
+                      29640 - Fuengirola, Málaga
+                    </p>
+                  </td>
+                  <td class="mobile-text-center" style="vertical-align: top; text-align: right; padding-top: 10px;">
+                    <p style="margin: 0; color: #4a5568; font-size: 12px;">
+                      952 581 814
+                    </p>
+                    <p style="margin: 0; color: #4a5568; font-size: 12px;">
+                      cristina@ccsyasociados.com
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Bottom Footer -->
+  <table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="center" style="padding: 20px;">
+        <p style="margin: 0; color: #718096; font-size: 11px;">
+          © 2026 CCS y Asociados. Todos los derechos reservados.
+        </p>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

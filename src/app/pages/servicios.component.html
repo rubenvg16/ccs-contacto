@@ -1,0 +1,54 @@
+<!-- Hero Section -->
+<section class="page-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <span class="eyebrow">Áreas de práctica</span>
+    <h1 class="title">Servicios</h1>
+    <p class="subtitle">Asesoramiento legal integral en todas las ramas del derecho</p>
+  </div>
+  <div class="hero-accent"></div>
+</section>
+
+<!-- Services Grid -->
+<section class="services-section">
+  <div class="container">
+    <div class="services-grid">
+      @for (service of services; track service.title; let i = $index) {
+        <div class="service-card" [style.animation-delay]="(i * 0.1) + 's'">
+          <div class="card-header">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path [attr.d]="service.icon"/>
+              </svg>
+            </div>
+            <div class="card-number">{{ (i + 1).toString().padStart(2, '0') }}</div>
+          </div>
+          <div class="card-body">
+            <h2>{{ service.title }}</h2>
+            <p>{{ service.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="contact-cta">
+  <div class="container">
+    <div class="cta-box">
+      <div class="cta-content">
+        <h2>¿Necesita asesoramiento legal?</h2>
+        <p>Consúltenos sin compromiso. Nuestro equipo está preparado para atenderle.</p>
+      </div>
+      <div class="cta-contact">
+        <a routerLink="/contacto" class="cta-button">
+          Contactar ahora
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,131 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, #0d1f3c 0%, #1a365d 100%);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  text-decoration: none;
+  gap: 0.5rem;
+}
+
+.logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #c4a052;
+  letter-spacing: 0.05em;
+}
+
+.logo-sub {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+
+.main-nav {
+  display: flex;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.nav-link {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #c4a052;
+    transition: width 0.3s ease;
+  }
+
+  &:hover, &.active {
+    color: #ffffff;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+
+  .bar {
+    width: 25px;
+    height: 2px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+  }
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #0d1f3c;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+
+  &.open {
+    max-height: 300px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+
+  .nav-link {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

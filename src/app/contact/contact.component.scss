@@ -1,0 +1,689 @@
+// =====================================================
+// CCS y Asociados - Contact Page Styles
+// =====================================================
+
+// Color System
+$color-primary: #1a365d;
+$color-primary-light: #2c5282;
+$color-primary-dark: #0d1f3c;
+$color-accent: #c4a052;
+$color-accent-light: #d4b872;
+
+$color-text: #2d3748;
+$color-text-muted: #4a5568;
+$color-text-light: #718096;
+
+$color-bg: #f8f9fa;
+$color-bg-card: #ffffff;
+$color-bg-subtle: #f0f2f5;
+
+$color-border: #e2e8f0;
+$color-border-light: #edf2f7;
+
+$color-success: #38a169;
+$color-error: #e53e3e;
+
+// Typography
+$font-display: 'Cormorant Garamond', Georgia, serif;
+$font-body: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+
+// Spacing
+$space-xs: 0.25rem;
+$space-sm: 0.5rem;
+$space-md: 1rem;
+$space-lg: 1.5rem;
+$space-xl: 2rem;
+$space-2xl: 3rem;
+$space-3xl: 4rem;
+
+// Breakpoints
+$bp-mobile: 640px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+
+// Mixins
+@mixin respond-to($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin card-shadow {
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.04),
+    0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+@mixin card-shadow-hover {
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.04),
+    0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+// =====================================================
+// Main Layout
+// =====================================================
+.contact-page {
+  position: relative;
+  min-height: 100vh;
+  background: $color-bg;
+  font-family: $font-body;
+  color: $color-text;
+  overflow-x: hidden;
+}
+
+// Background Decoration
+.bg-decoration {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bg-line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba($color-primary, 0.05), transparent);
+  
+  &-1 {
+    left: 20%;
+  }
+  
+  &-2 {
+    left: 80%;
+  }
+}
+
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.03;
+  
+  &-1 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, $color-primary 0%, transparent 70%);
+    top: -200px;
+    right: -100px;
+  }
+  
+  &-2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, $color-accent 0%, transparent 70%);
+    bottom: 20%;
+    left: -100px;
+  }
+}
+
+// =====================================================
+// Hero Section
+// =====================================================
+.hero {
+  position: relative;
+  padding: $space-3xl $space-xl;
+  background: linear-gradient(135deg, $color-primary-dark 0%, $color-primary 100%);
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba($color-accent, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 30%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: $color-accent;
+  margin-bottom: $space-md;
+}
+
+.title {
+  font-family: $font-display;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 $space-sm;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  
+  @include respond-to($bp-mobile) {
+    font-size: 2.5rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+  font-weight: 400;
+}
+
+.hero-accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, $color-accent, $color-accent-light, $color-accent);
+}
+
+// =====================================================
+// Content Grid
+// =====================================================
+.content-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: $space-xl;
+  max-width: 1200px;
+  margin: -$space-2xl auto $space-2xl;
+  padding: 0 $space-xl;
+  
+  @include respond-to($bp-desktop) {
+    grid-template-columns: 1fr;
+    margin-top: -$space-xl;
+  }
+}
+
+// =====================================================
+// Info Panel (Left Sidebar)
+// =====================================================
+.info-panel {
+  position: relative;
+  @include card-shadow;
+  background: $color-bg-card;
+  border-radius: 8px;
+  padding: $space-xl;
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
+  
+  @include respond-to($bp-desktop) {
+    order: 2;
+  }
+}
+
+.info-section {
+  margin-bottom: $space-xl;
+  
+  &:last-of-type {
+    margin-bottom: $space-lg;
+  }
+}
+
+.section-title {
+  font-family: $font-display;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: $color-primary;
+  margin: 0 0 $space-lg;
+  padding-bottom: $space-sm;
+  border-bottom: 2px solid $color-accent;
+  display: inline-block;
+}
+
+.info-item {
+  display: flex;
+  gap: $space-md;
+  margin-bottom: $space-lg;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.info-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  border-radius: 8px;
+  
+  svg {
+    width: 20px;
+    height: 20px;
+    color: #ffffff;
+  }
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $color-text-light;
+  margin-bottom: $space-xs;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  color: $color-text;
+  text-decoration: none;
+  line-height: 1.5;
+  
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+address.info-value {
+  font-style: normal;
+}
+
+// Schedule
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+}
+
+.schedule-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  padding: $space-sm 0;
+  border-bottom: 1px solid $color-border-light;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+  
+  span:first-child {
+    color: $color-text-muted;
+  }
+  
+  span:last-child {
+    color: $color-text;
+    font-weight: 500;
+  }
+}
+
+// Map Button
+.map-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-sm;
+  width: 100%;
+  padding: $space-md $space-lg;
+  background: transparent;
+  border: 2px solid $color-primary;
+  border-radius: 6px;
+  font-family: $font-body;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: $color-primary;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  &:hover {
+    background: $color-primary;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba($color-primary, 0.3);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// =====================================================
+// Form Panel (Right Side)
+// =====================================================
+.form-panel {
+  @include card-shadow;
+  background: $color-bg-card;
+  border-radius: 8px;
+  padding: $space-xl;
+  animation: fadeInUp 0.8s ease-out 0.3s backwards;
+  
+  @include respond-to($bp-desktop) {
+    order: 1;
+  }
+}
+
+.form-header {
+  margin-bottom: $space-xl;
+}
+
+.form-title {
+  font-family: $font-display;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $color-primary;
+  margin: 0 0 $space-sm;
+}
+
+.form-description {
+  font-size: 0.95rem;
+  color: $color-text-muted;
+  margin: 0;
+  line-height: 1.6;
+}
+
+// Form Styles
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+  
+  label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $color-text;
+  }
+  
+  input, textarea {
+    padding: $space-md;
+    border: 1px solid $color-border;
+    border-radius: 6px;
+    font-family: $font-body;
+    font-size: 0.95rem;
+    color: $color-text;
+    background: $color-bg-subtle;
+    transition: all 0.3s ease;
+    
+    &::placeholder {
+      color: $color-text-light;
+    }
+    
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba($color-primary, 0.1);
+    }
+    
+    &.error {
+      border-color: $color-error;
+      
+      &:focus {
+        box-shadow: 0 0 0 3px rgba($color-error, 0.1);
+      }
+    }
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-lg;
+  
+  @include respond-to($bp-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.error-message {
+  font-size: 0.8rem;
+  color: $color-error;
+  display: flex;
+  align-items: center;
+  gap: $space-xs;
+  
+  &::before {
+    content: '⚠';
+    font-size: 0.7rem;
+  }
+}
+
+// Submit Button
+.submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-sm;
+  padding: $space-md $space-xl;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  border: none;
+  border-radius: 6px;
+  font-family: $font-body;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: $space-md;
+  
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba($color-primary, 0.4);
+  }
+  
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+  
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.form-error {
+  padding: $space-md;
+  background: rgba($color-error, 0.1);
+  border: 1px solid rgba($color-error, 0.2);
+  border-radius: 6px;
+  
+  p {
+    margin: 0;
+    color: $color-error;
+    font-size: 0.9rem;
+  }
+}
+
+// Success Message
+.success-message {
+  text-align: center;
+  padding: $space-2xl;
+  
+  .success-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto $space-lg;
+    background: linear-gradient(135deg, $color-success 0%, #2f855a 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleIn 0.5s ease-out;
+    
+    svg {
+      width: 32px;
+      height: 32px;
+      color: #ffffff;
+    }
+  }
+  
+  h3 {
+    font-family: $font-display;
+    font-size: 1.5rem;
+    color: $color-primary;
+    margin: 0 0 $space-sm;
+  }
+  
+  p {
+    color: $color-text-muted;
+    margin: 0;
+  }
+}
+
+// =====================================================
+// Map Section
+// =====================================================
+.map-section {
+  position: relative;
+  height: 350px;
+  margin-top: $space-2xl;
+  
+  @include respond-to($bp-mobile) {
+    height: 280px;
+  }
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+  
+  iframe {
+    filter: grayscale(30%) contrast(1.05);
+    transition: filter 0.3s ease;
+    
+    &:hover {
+      filter: grayscale(0%) contrast(1);
+    }
+  }
+}
+
+.map-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.map-pin {
+  width: 40px;
+  height: 40px;
+  color: $color-accent;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  animation: bounce 2s ease-in-out infinite;
+}
+
+// =====================================================
+// Footer
+// =====================================================
+.page-footer {
+  text-align: center;
+  padding: $space-xl;
+  background: $color-primary-dark;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  
+  p {
+    margin: 0;
+    
+    &:first-child {
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+      margin-bottom: $space-xs;
+    }
+  }
+  
+  .footer-address {
+    font-style: normal;
+  }
+}
+
+// =====================================================
+// Animations
+// =====================================================
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+// Staggered animations for form elements
+.form-group {
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      animation: fadeInUp 0.6s ease-out #{(0.4 + $i * 0.1)}s backwards;
+    }
+  }
+}
