@@ -11,7 +11,7 @@
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0.25rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,24 +19,30 @@
 
 .logo {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   text-decoration: none;
-  gap: 0.5rem;
 }
 
-.logo-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #c4a052;
-  letter-spacing: 0.05em;
+.logo-img {
+  height: 110px;
+  width: auto;
+  display: block;
+  filter:
+    drop-shadow(0.0px 0 0.8px rgba(255, 255, 255, 0.35))
+    drop-shadow(-0.0px 0 0.8px rgba(255, 255, 255, 0.35))
+    drop-shadow(0 0.0px 0.8px rgba(255, 255, 255, 0.35))
+    drop-shadow(0 -0.0px 0.8px rgba(255, 255, 255, 0.35));
 }
 
-.logo-sub {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 400;
+@media (max-width: 768px) {
+  .logo-img {
+    height: 64px;
+    filter:
+      drop-shadow(0.5px 0 0.8px rgba(255, 255, 255, 0.35))
+      drop-shadow(-0.5px 0 0.8px rgba(255, 255, 255, 0.35))
+      drop-shadow(0 0.5px 0.8px rgba(255, 255, 255, 0.35))
+      drop-shadow(0 -0.5px 0.8px rgba(255, 255, 255, 0.35));
+  }
 }
 
 .main-nav {

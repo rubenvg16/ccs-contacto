@@ -21,11 +21,11 @@ export class ContactComponent {
     name: 'CCS y Asociados',
     contact: 'Cristina Castillo Solano',
     email: 'cristina@ccsyasociados.com',
-    phone: '952 581 814',
-    fax: '952 581 814',
-    address: 'Avda. Ramón y Cajal 2, 3ºC',
-    city: '29640 - Fuengirola, Málaga',
-    coordinates: { lat: 36.5375, lng: -4.6247 }
+    phone: '606 54 04 01',
+    fax: '606 54 04 01',
+    address: 'Av. Condes de San Isidro, 9, 1ª planta, oficina 10',
+    city: '29640 Fuengirola, Málaga',
+    coordinates: { lat: 36.5385, lng: -4.6250 }
   };
 
   constructor(
