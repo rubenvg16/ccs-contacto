@@ -4,8 +4,8 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: linear-gradient(135deg, #8a0405 0%, #af0506 100%);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
 }
 
 .header-container {
@@ -20,6 +20,7 @@
 .logo {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
   text-decoration: none;
 }
 
@@ -29,9 +30,21 @@
   display: block;
 }
 
+.logo-text {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #af0506;
+  white-space: nowrap;
+}
+
 @media (max-width: 768px) {
   .logo-img {
     height: 64px;
+  }
+
+  .logo-text {
+    font-size: 1rem;
   }
 }
 
@@ -48,7 +61,7 @@
   font-family: 'Source Sans 3', sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.8);
+  color: #6b7280;
   text-decoration: none;
   padding: 0.5rem 0;
   position: relative;
@@ -61,12 +74,12 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: #3a3a3c;
+    background: #af0506;
     transition: width 0.3s ease;
   }
 
   &:hover, &.active {
-    color: #ffffff;
+    color: #af0506;
 
     &::after {
       width: 100%;
@@ -90,7 +103,7 @@
   .bar {
     width: 25px;
     height: 2px;
-    background: #ffffff;
+    background: #3a3a3c;
     transition: all 0.3s ease;
   }
 }
@@ -100,14 +113,14 @@
   top: 100%;
   left: 0;
   right: 0;
-  background: #8a0405;
+  background: #ffffff;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
 
   &.open {
     max-height: 300px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #e2e8f0;
   }
 }
 
@@ -118,7 +131,7 @@
 
   .nav-link {
     padding: 1rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #e2e8f0;
 
     &:last-child {
       border-bottom: none;
