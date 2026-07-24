@@ -1,10 +1,10 @@
 // Variables
 :host {
-  --color-primary: #1a365d;
-  --color-primary-light: #2c5282;
-  --color-primary-dark: #0d1f3c;
-  --color-accent: #c4a052;
-  --color-accent-light: #d4b872;
+  --color-primary: #af0506;
+  --color-primary-light: #d40708;
+  --color-primary-dark: #8a0405;
+  --color-accent: #3a3a3c;
+  --color-accent-light: #5a5a5e;
   --color-text: #2d3748;
   --color-text-muted: #4a5568;
   --color-bg: #f8f9fa;
@@ -25,7 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #0d1f3c 0%, #1a365d 50%, #2c5282 100%);
+  background: linear-gradient(135deg, #8a0405 0%, #af0506 50%, #d40708 100%);
   overflow: hidden;
 }
 
@@ -36,8 +36,8 @@
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 20% 30%, rgba(196, 160, 82, 0.15) 0%, transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(196, 160, 82, 0.1) 0%, transparent 30%),
+    radial-gradient(circle at 20% 30%, rgba(58, 58, 60, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(58, 58, 60, 0.1) 0%, transparent 30%),
     url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
@@ -112,7 +112,7 @@
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(196, 160, 82, 0.4);
+    box-shadow: 0 8px 25px rgba(58, 58, 60, 0.4);
 
     svg {
       transform: translateX(4px);
@@ -183,7 +183,7 @@
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 20px 40px rgba(26, 54, 93, 0.2);
+    box-shadow: 0 20px 40px rgba(175, 5, 6, 0.2);
 
     svg {
       width: 100%;
@@ -232,7 +232,7 @@
   gap: 2rem;
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(26, 54, 93, 0.1);
+  border-top: 1px solid rgba(175, 5, 6, 0.1);
 
   @media (max-width: 600px) {
     flex-direction: column;
@@ -360,7 +360,7 @@
     width: 100%;
     justify-content: center;
     padding: 0.75rem;
-    border: 1px solid rgba(196, 160, 82, 0.3);
+    border: 1px solid rgba(58, 58, 60, 0.3);
     border-radius: 6px;
   }
 }

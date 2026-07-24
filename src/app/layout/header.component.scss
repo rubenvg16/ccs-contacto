@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: linear-gradient(135deg, #0d1f3c 0%, #1a365d 100%);
+  background: linear-gradient(135deg, #8a0405 0%, #af0506 100%);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -71,7 +71,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: #c4a052;
+    background: #3a3a3c;
     transition: width 0.3s ease;
   }
 
@@ -110,7 +110,7 @@
   top: 100%;
   left: 0;
   right: 0;
-  background: #0d1f3c;
+  background: #8a0405;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;

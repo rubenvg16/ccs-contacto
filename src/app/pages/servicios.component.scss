@@ -1,9 +1,9 @@
 :host {
-  --color-primary: #1a365d;
-  --color-primary-light: #2c5282;
-  --color-primary-dark: #0d1f3c;
-  --color-accent: #c4a052;
-  --color-accent-light: #d4b872;
+  --color-primary: #af0506;
+  --color-primary-light: #d40708;
+  --color-primary-dark: #8a0405;
+  --color-accent: #3a3a3c;
+  --color-accent-light: #5a5a5e;
   --color-text: #2d3748;
   --color-text-muted: #4a5568;
   --color-bg: #f8f9fa;
@@ -32,7 +32,7 @@
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 30% 50%, rgba(196, 160, 82, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 30% 50%, rgba(58, 58, 60, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 30%);
 }
 
@@ -102,7 +102,7 @@
   background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(26, 54, 93, 0.08);
+  border: 1px solid rgba(175, 5, 6, 0.08);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
@@ -110,7 +110,7 @@
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(26, 54, 93, 0.15);
+    box-shadow: 0 20px 40px rgba(175, 5, 6, 0.15);
     border-color: var(--color-accent);
 
     .card-header {
@@ -241,7 +241,7 @@
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(196, 160, 82, 0.4);
+    box-shadow: 0 8px 25px rgba(58, 58, 60, 0.4);
 
     svg {
       transform: translateX(4px);
